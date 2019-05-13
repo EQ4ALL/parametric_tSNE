@@ -160,7 +160,7 @@ if __name__ == "__main__":
         num_samps = 400
         do_pretrain = False
         epochs = 5
-        plot_pca = False
+        plot_pca = True
         override = True
     num_rand_points = int(num_samps / num_clusters)
     
