@@ -1,0 +1,17 @@
+[tSNE_param]
+input_dimension = 63
+output_dimension = 2
+perplexity = 100
+alpha = 1.0
+batch_size = 128
+epochs = 20
+do_pretrain = true
+random_seed = 1
+
+[data]
+train_file = Syn.csv
+test1_file = Syn+aug.csv
+test2_file = aug.csv
+
+[visual]
+out_file = tSNE_KFS_Syn_Syn+aug_aug_Perp{perp_tag}.pdf
