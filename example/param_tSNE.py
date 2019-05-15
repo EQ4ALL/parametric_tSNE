@@ -100,13 +100,13 @@ if __name__ == "__main__":
     colslist = [i for i in range(dimension)]
     colstuple = tuple(colslist)
 
-    train_data = np.loadtxt(train_file, delimiter=',', dtype=np.float32, usecols=colstuple)
-    test1_data = np.loadtxt(test1_file, delimiter=',', dtype=np.float32, usecols=colstuple)
-    test2_data = np.loadtxt(test2_file, delimiter=',', dtype=np.float32, usecols=colstuple)
+    train_data = np.loadtxt(train_file, delimiter=',', dtype=np.float32, usecols=colstuple, encoding='utf-8-sig')
+    test1_data = np.loadtxt(test1_file, delimiter=',', dtype=np.float32, usecols=colstuple, encoding='utf-8-sig')
+    test2_data = np.loadtxt(test2_file, delimiter=',', dtype=np.float32, usecols=colstuple, encoding='utf-8-sig')
 
-    train_label = np.loadtxt(train_file, delimiter=',', dtype=np.unicode, usecols={63})
-    test1_label = np.loadtxt(test1_file, delimiter=',', dtype=np.unicode, usecols={63})
-    test2_label = np.loadtxt(test2_file, delimiter=',', dtype=np.unicode, usecols={63})
+    train_label = np.loadtxt(train_file, delimiter=',', dtype=np.unicode, usecols={63}, encoding='utf-8-sig')
+    test1_label = np.loadtxt(test1_file, delimiter=',', dtype=np.unicode, usecols={63}, encoding='utf-8-sig')
+    test2_label = np.loadtxt(test2_file, delimiter=',', dtype=np.unicode, usecols={63}, encoding='utf-8-sig')
 
     print('data loaded. elapsed time = {}'.format(time.time() - startTime))
 
